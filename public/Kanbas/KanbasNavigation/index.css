@@ -1,0 +1,27 @@
+.wd-col-20pc {
+  float: left;
+  width: 20%;
+}
+.wd-col-60pc {
+  float: left;
+  width: 60%;
+}
+
+.wd-kanbas-navigator {
+  background-color: black;
+  color: white;
+  padding: 0px;
+  width: 80px;
+  font-size: 0.8em;
+}
+
+.wd-kanbas-navigator li {
+  list-style-type: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.wd-kanbas-navigator li a {
+  color: white;
+  text-decoration: none;
+}

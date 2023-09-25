@@ -1,0 +1,43 @@
+.wd-col-20pc {
+  float: left;
+  width: 20%;
+}
+
+.wd-col-60pc {
+  float: left;
+  width: 60%;
+}
+
+.wd-col-80pc {
+  float: left;
+  width: 80%;
+}
+
+.wd-col-50pc {
+  float: left;
+  width: 50%;
+}
+
+.wd-float-left {
+  float: left;
+}
+
+.wd-selector-1 .wd-selector-3 {
+  background-color: red;
+  color: white;
+}
+
+.wd-selector-2 > .wd-selector-3 > .wd-selector-4 {
+  background-color: yellow;
+  color: blue;
+}
+
+p#id-selector-1 {
+  background-color: green;
+  color: white;
+}
+
+p#asdf {
+  background-color: red;
+  color: white;
+}

@@ -1,90 +1,109 @@
-<table border="1" width="100%">
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="/Kanbas/Account/Profile/screen.html">Account</a>
-        </li>
-        <li>
-          <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-        </li>
-        <li>
-          <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-        </li>
-        <li>
-          <a href="#">Calendar</a>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="/Kanbas/Courses/Home/screen.html">Home</a>
-        </li>
-        <li>
-          <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
-        </li>
-        <li>
-          <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-        </li>
-        <li>
-          <a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a>
-        </li>
-        <li>
-          <a href="#">Zoom</a>
-        </li>
-        <li>
-          <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <label for="assignmentName"> Assignment Name </label>
-      <div>
-        <input
-          id="assignmentName"
-          title="This is the name of the assignment"
-          value="A1 - HTML"
-          placeholder="Assignment 1"
-        />
-      </div>
-      <label>Description</label>
-      <br />
-      <textarea cols="40" rows="10">
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+  </head>
+  <body>
+    <table border="1" width="100%">
+      <tr>
+        <td valign="top">
+          <ul>
+            <li>
+              <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+            </li>
+            <li>
+              <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+            </li>
+            <li>
+              <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+            </li>
+            <li>
+              <a href="#">Calendar</a>
+            </li>
+          </ul>
+        </td>
+        <td valign="top">
+          <ul class="wd-course-navigation list-group">
+            <li class="list-group-item">
+              <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+            </li>
+            <li class="list-group-item">
+              <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+            </li>
+            <li class="list-group-item active">
+              <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+            </li>
+            <li class="list-group-item">
+              <a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Zoom</a>
+            </li>
+            <li class="list-group-item">
+              <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+            </li>
+          </ul>
+        </td>
+        <td valign="top">
+          <label for="assignmentName"> Assignment Name </label>
+          <div class="pe-3">
+            <input
+              class="form-control"
+              id="assignmentName"
+              title="This is the name of the assignment"
+              value="A1 - HTML"
+              placeholder="Assignment 1"
+            />
+          </div>
+          <label>Description</label>
+
+          <textarea cols="40" rows="10" class="form-control">
 This is the descriptiuon of the assignment
 </textarea
-      >
-      <div>
-        Points
-        <input type="number" value="98" max="100" min="50" step="5" />
-      </div>
-      Submission Type<br />
-      <input type="checkbox" checked /> Text Entry <br />
-      <input id="url" type="checkbox" /> <label for="url">Website URL</label>
-      <br />
-      <label><input type="checkbox" /> Media Recordings</label><br />
-      <input type="checkbox" /> File Uploads
-      <div>
-        Favorite Color:
-        <input type="radio" name="color" /> Red
-        <input name="color" type="radio" /> Blue
-        <input type="radio" name="color" /> Green
-      </div>
-      <div>
-        Favorite Genres:
-        <input type="radio" name="genres" /> Rock
-        <input type="radio" name="genres" /> Blues
-        <input type="radio" name="genres" /> Disco
-      </div>
-      <div>
-        Due Date
-        <input
-          type="date"
-          value="2023-09-15"
-          min="2023-09-05"
-          max="2023-09-23"
-        />
-      </div>
-    </td>
-  </tr>
-</table>
+          >
+          <div>
+            Points
+            <input
+              class="form-control"
+              type="number"
+              value="98"
+              max="100"
+              min="50"
+              step="5"
+            />
+          </div>
+          Submission Type<br />
+          <input type="checkbox" checked /> Text Entry <br />
+          <input id="url" type="checkbox" />
+          <label for="url">Website URL</label>
+          <br />
+          <label><input type="checkbox" /> Media Recordings</label><br />
+          <input type="checkbox" /> File Uploads
+          <div>
+            Favorite Color:
+            <input type="radio" name="color" /> Red
+            <input name="color" type="radio" /> Blue
+            <input type="radio" name="color" /> Green
+          </div>
+          <div>
+            Favorite Genres:
+            <input type="radio" name="genres" /> Rock
+            <input type="radio" name="genres" /> Blues
+            <input type="radio" name="genres" /> Disco
+          </div>
+          <div>
+            Due Date
+            <input
+              type="date"
+              value="2023-09-15"
+              min="2023-09-05"
+              max="2023-09-23"
+            />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

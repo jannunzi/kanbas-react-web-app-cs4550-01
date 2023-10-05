@@ -20,7 +20,7 @@ function House() {
       <h3>bathrooms</h3>
       {house.bathrooms}
       <h3>Data</h3>
-      <pre>{JSON.stringify(house, null, 2)}</pre>
+      <pre>{JSON.stringify(house, null, 4)}</pre>
     </div>
   );
 }

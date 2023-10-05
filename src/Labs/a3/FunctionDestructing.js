@@ -1,8 +1,8 @@
 function FunctionDestructing() {
   const add = (a, b) => a + b;
   const sum = add(1, 2);
-  const subtract = ({ a, b }) => a - b;
-  const difference = subtract({ a: 4, b: 2 });
+  const subtract = ({ b, a }) => a - b;
+  const difference = subtract({ a: 4, b: 2, c: 234 });
   return (
     <div>
       <h2>Function Destructing</h2>

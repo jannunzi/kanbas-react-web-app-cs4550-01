@@ -14,6 +14,11 @@ function MapFunction() {
       <br />
       cubes = {cubes}
       <br />
+      <ul>
+        {numberArray1.map((a) => (
+          <li>{a}</li>
+        ))}
+      </ul>
     </div>
   );
 }

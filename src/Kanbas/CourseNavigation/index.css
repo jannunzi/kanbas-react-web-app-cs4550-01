@@ -1,0 +1,32 @@
+.course-navigation-container {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .course-nav-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #555;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .course-nav-link:hover {
+    background-color: #f0f0f0;
+    border-left: 3px solid #000;
+  }
+  
+  .course-nav-link.active {
+    background-color: #f0f0f0;
+    border-left: 3px solid #000;
+    font-weight: bold;
+  }
+  
+  /* If you need space between items */
+  .course-nav-link + .course-nav-link {
+    margin-top: 10px;
+  }
+  

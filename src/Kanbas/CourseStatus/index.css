@@ -1,0 +1,44 @@
+.course-status-container {
+    font-family: Arial, sans-serif;
+    width: 200px;
+  }
+  
+  .course-action {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 4  px;
+  }
+  
+  .course-action-icon {
+    margin-right: 8px;
+  }
+  
+  .todo-section {
+    margin-top: 20px;
+  }
+  
+  .todo-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .todo-item-title {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  
+  .todo-item-close {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

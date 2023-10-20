@@ -5,8 +5,6 @@ function ArrayIndexAndLength() {
   return (
     <div>
       <h2>Array Index and Length</h2>
-      numberArray1 = {numberArray1}
-      <br />
       length1 = {length1}
       <br />
       index1 = {index1}

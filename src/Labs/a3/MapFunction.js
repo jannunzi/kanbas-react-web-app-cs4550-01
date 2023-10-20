@@ -8,17 +8,10 @@ function MapFunction() {
   return (
     <div>
       <h2>Map Function</h2>
-      numberArray1 = {numberArray1}
-      <br />
       squares = {squares}
       <br />
       cubes = {cubes}
       <br />
-      <ul>
-        {numberArray1.map((a) => (
-          <li>{a}</li>
-        ))}
-      </ul>
     </div>
   );
 }

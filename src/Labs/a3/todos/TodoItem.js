@@ -1,15 +1,19 @@
-const TodoItem = ({ todo }) => {
-  //   const todo = {
-  //     done: done,
-  //     title: title,
-  //     status: status,
-  //   };
+const TodoItem = (
+  {
+    todo = {
+      done: true,
+      title: 'Buy milk',
+      status: 'COMPLETED'
+    }
+  }) => {
   return (
     <li className="list-group-item">
-      <input type="checkbox" defaultChecked={todo.done} />
+      <input type="checkbox"
+             defaultChecked={todo.done}/>
       &nbsp;
-      {todo.title}({todo.status})
+      {todo.title}
+      ({todo.status})
     </li>
   );
-};
-export default TodoItem;
+ }
+ export default TodoItem;

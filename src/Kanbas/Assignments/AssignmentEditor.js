@@ -2,6 +2,8 @@ import React from "react";
 import db from "../Database";
 import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
   const assignment = db.assignments.find((a) => a._id === assignmentId);
@@ -13,18 +15,24 @@ function AssignmentEditor() {
   };
   return (
     <div>
-      <h1>Assignment Editor!!! {assignment.title}</h1>
-      <input className="form-control" defaultValue={assignment.title} />
-      <button onClick={handleSave} className="btn btn-success">
-        Save
-      </button>
-      <Link
-        className="btn btn-warning"
-        to={`/Kanbas/Courses/${courseId}/Assignments`}
-      >
-        Cancel
-      </Link>
-      <button className="btn btn-danger">Delete</button>
+      <div className="assignment-editor-header">
+        <div className="editor-controls">
+          <span className="published-status">✔ Published</span>
+          <button className="editor-ellipsis btn-secondary"><FontAwesomeIcon icon={faEllipsisV} /></button>
+        </div>
+        <hr/>
+      </div>
+      <h6>Assignment Name</h6>
+      <input className="form-control assignment-input" defaultValue={assignment.title} />
+      <div className="editor-actions">
+        <Link className="btn btn-secondary" to={`/Kanbas/Courses/${courseId}/Assignments`}>
+          Cancel
+        </Link>
+        <button onClick={handleSave} className="btn btn-danger">
+          Save
+        </button>
+      </div>
+      <hr/>
     </div>
   );
 }

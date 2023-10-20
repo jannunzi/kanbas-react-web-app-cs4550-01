@@ -1,0 +1,120 @@
+.modules-container {
+    padding: 20px;
+  }
+  
+  .modules-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .mybtn {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .action-btn {
+    
+    background-color: gray;
+  }
+  
+  .add-module-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+   
+  }
+  
+  .dropdown-btn:after {
+    content: "▼";
+    margin-left: 5px;
+  }
+  
+  .mybtn:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+
+  .action-ellipsis {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  
+  .modules-divider {
+    border-top: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
+.module-list-group {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .module-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .module-list-group-item {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    display: block; /* Use block instead of flex */
+    position: relative;
+  }
+  
+  .module-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .module-icon {
+    margin-right: 10px;
+  }
+  
+  .module-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .lesson-list-group {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .lesson-list-group-item {
+    padding: 8px 10px;
+    background-color: #f5f5f5;
+    margin: 2px 0;
+    border-radius: 4px;
+  }
+  
+  /* Add some styling to mimic the checkmark, plus and ellipsis icons */
+  .checkmark, .plus, .ellipsis {
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .checkmark:hover, .plus:hover, .ellipsis:hover {
+    background-color: #ccc;
+  }
+  
+  /* ... existing styles ... */
+

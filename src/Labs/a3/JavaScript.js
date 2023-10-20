@@ -27,28 +27,35 @@ function JavaScript() {
   return (
     <div>
       <h1>JavaScript</h1>
-      <FunctionDestructing />
-      <Destructing />
-      <Spread />
-      <House />
-      <TemplateLiterals />
-      <FilterFunction />
-      <FindFunction />
-      <JsonStringify />
-      <MapFunction />
-      <ForLoops />
-      <AddingAndRemovingDataToFromArrays />
-      <ArrayIndexAndLength />
-      <WorkingWithArrays />
-      <FunctionParenthesisAndParameters />
+      <VariablesAndConstants />
+      <VariableTypes />
+      <BooleanVariables />
+      <IfElse />
+      <TernaryOperator />
+      <ES5Functions />
       <ImpliedReturn />
       <ArrowFunctions />
-      <ES5Functions />
-      <TernaryOperator />
-      <IfElse />
-      <BooleanVariables />
-      <VariableTypes />
-      <VariablesAndConstants />
+      <FunctionParenthesisAndParameters />
+      <WorkingWithArrays />
+      <TemplateLiterals />
+      <House />
+      <Spread />
+      <Destructing />
+      <FunctionDestructing />
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </div>
   );
 }

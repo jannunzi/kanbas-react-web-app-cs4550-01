@@ -1,5 +1,5 @@
 function TernaryOperator() {
-  let loggedIn = false;
+  let loggedIn = true;
   return (
     <div>
       <h2>Logged In</h2>

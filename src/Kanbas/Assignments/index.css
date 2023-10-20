@@ -1,0 +1,142 @@
+.assignment-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .assignment-search {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .assignment-button {
+    background-color: #707070;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .add-assignment-button{
+    background-color: red;
+  }
+  
+  .assignment-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .list-group {
+    width: 100%;
+  }
+  
+  .assignment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  .assignment-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .assignment-item-left, .assignment-item-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Add other styles based on additional elements or icons you might include */
+  .assignment-container-header {
+    background-color: #b0aeae; /* darker grey */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.title {
+    flex-grow: 1; /* Allow title to take up remaining space */
+}
+
+.arrow {
+    margin-right: 225px; /* Space between title and arrow */
+}
+
+.percentage {
+    margin-right: 10px; /* Space before the '+' symbol */
+}
+
+.plus, .ellipsis {
+    margin: 0 5px; /* Spacing around '+' and ellipsis symbols */
+}
+.assignment-editor-container {
+  width: 100%;
+  max-width: 800px; /* Adjust width based on design requirements */
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.assignment-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7; /* Adds a line beneath the header */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.editor-controls {
+  display: flex;
+  align-items: center;
+  padding-left: 225px;
+}
+
+.published-status {
+  background-color: #4CAF50; /* green color */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.editor-ellipsis {
+  font-size: 24px; /* adjust size as needed */
+}
+
+.assignment-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Space between buttons */
+}
+
+.cancel{
+  background-color: gray;
+}

@@ -1,0 +1,44 @@
+/* KanbasNavigation.css */
+
+.navigation-list-group {
+    width: 120px;
+    background-color: black;
+    padding: 10px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navigation-list-group-item {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;
+    
+}
+
+.navigation-list-group-item i {
+    font-size: 20px;  /* adjust the size as needed */
+}
+
+.navigation-list-group-item.active {
+    background-color: red; /* Change this to the red color you want for active links */
+}
+
+.list-group-item:hover {
+    background-color: #333;  /* slightly darker background for hover effect */
+}
+
+/* Add this to your index.css or whichever CSS file you're using */
+
+.northeastern-logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 45px;
+    font-size: 48px; /* Adjust as needed */
+    background-color: black; /* Adjust color as needed */
+    color: red; /* Adjust color as needed */
+}

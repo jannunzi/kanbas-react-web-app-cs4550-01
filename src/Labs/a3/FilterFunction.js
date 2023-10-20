@@ -8,8 +8,6 @@ function FilterFunction() {
   return (
     <div>
       <h2>Filter Function</h2>
-      numberArray1 = {numberArray1}
-      <br />
       numbersGreaterThan2 = {numbersGreaterThan2}
       <br />
       evenNumbers = {evenNumbers}

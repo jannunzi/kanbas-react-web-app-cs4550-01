@@ -1,10 +1,10 @@
 import ModuleList from "./ModuleList";
+import "./index.css";
 
 function Modules() {
   return (
     <div>
-      <h1>Modules</h1>
-      <ModuleList />
+      <ModuleList/>
     </div>
   );
 }

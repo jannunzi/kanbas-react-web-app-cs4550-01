@@ -1,0 +1,69 @@
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.courses-header {
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.courses-container {
+  gap: 20px; /* To ensure spacing between cards */
+}
+
+.course-card {
+  display: block;
+  padding: 15px;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 250px;
+  flex: 0 0 auto;
+  margin-right: 20px; /* Spacing between cards */
+  margin-bottom: 20px; /* Spacing between rows */
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.course-details {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.course-semester {
+  color: #666;
+  font-size: 14px;
+}
+
+.course-image {
+  width: 100%;
+  height: 150px;
+  background-color: #c4c4c4;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}

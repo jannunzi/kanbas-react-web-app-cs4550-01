@@ -1,29 +1,52 @@
-import db from "../Database";
-import { useParams } from "react-router";
-
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules.filter((module) => module.course === courseId);
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
   return (
-    <div>
-      <ul className="list-group">
-        {modules.map((module, index) => (
+    <ul className="list-group">
+      <li className="list-group-item">
+        <button
+          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+        >
+          Add
+        </button>
+        <button onClick={() => dispatch(updateModule(module))}>Update</button>
+        <input
+          value={module.name}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, name: e.target.value }))
+          }
+        />
+        <textarea
+          value={module.description}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, description: e.target.value }))
+          }
+        />
+      </li>
+      {modules
+        .filter((module) => module.course === courseId)
+        .map((module, index) => (
           <li key={index} className="list-group-item">
-            {module.name}
-            {module.lessons && module.lessons.length > 0 && (
-              <ul className="list-group">
-                {module.lessons.map((lesson, index) => (
-                  <li key={index} className="list-group-item">
-                    {lesson.name}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <button onClick={() => dispatch(setModule(module))}>Edit</button>
+            <button onClick={() => dispatch(deleteModule(module._id))}>
+              Delete
+            </button>
+            <h3>{module.name}</h3>
+            <p>{module.description}</p>
           </li>
         ))}
-      </ul>
-    </div>
+    </ul>
   );
 }
-
 export default ModuleList;

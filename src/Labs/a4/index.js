@@ -11,29 +11,33 @@ import StringStateVariables from "./StringStateVariables";
 import ArrayStateVariable from "./ArrayStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
 import ReduxExamples from "./ReduxExamples";
-
+import store from "../store";
+import { Provider } from "react-redux";
 function Assignment4() {
   function sayHello() {
     alert("Hello");
   }
 
   return (
+    <Provider store={store}>
     <div>
       <h1>Assignment 4</h1>
       <ReduxExamples />
-      <ParentStateComponent />
-      <ArrayStateVariable />
-      <ObjectStateVariable />
-      <DateStateVariable />
-      <StringStateVariables />
-      <BooleanStateVariables />
-      <Counter />
-      <EventObject />
-      <PassingFunctions theFunction={sayHello} />
-      <PassingDataOnEvent />
-      <ClickEvent />
+
       <Add a={23} b={19} />
+      <ClickEvent />
+      <PassingDataOnEvent />
+      <PassingFunctions theFunction={sayHello} />
+      <EventObject />
+      <Counter />
+      <BooleanStateVariables />
+      <StringStateVariables />
+      <DateStateVariable />
+      <ObjectStateVariable />
+      <ArrayStateVariable />
+      <ParentStateComponent />
     </div>
+    </Provider>
   );
 }
 

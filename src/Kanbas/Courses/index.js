@@ -8,10 +8,10 @@ import Assignments from "../Assignments";
 import AssignmentEditor from "../Assignments/AssignmentEditor";
 import "./index.css";
 
-function Courses() {
+function Courses({courses}) {
   const { courseId } = useParams();
   const location = useLocation();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
 
   function getBreadcrumbs() {
     const paths = location.pathname.split('/').filter(Boolean);

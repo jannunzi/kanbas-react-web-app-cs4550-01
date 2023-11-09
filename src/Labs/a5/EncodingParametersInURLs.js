@@ -1,10 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
+  const [welcomeMessage, setWelcomeMessage] = useState("Message before server");
+
+  const fetchWelcomeMessage = async () => {
+    // const promise = axios.get("http://localhost:4000/a5/welcome");
+    // promise
+    //   .then((response) => {
+    //     setWelcomeMessage(response.data);
+    //   })
+    //   .error(() => {});
+    try {
+      const response = await axios.get("http://localhost:4000/a5/welcome");
+      setWelcomeMessage(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWelcomeMessage();
+  }, []);
+
   return (
     <div>
       <h3>Encoding Parameters In URLs</h3>
+      <h4>Welcome</h4>
+      {welcomeMessage && <h5>{welcomeMessage}</h5>}
       <h4>Calculator</h4>
       <input
         className="form-control"

@@ -16,3 +16,23 @@ export const updateUser = async (id, user) => {
   const response = await axios.put(`${USERS_API}/${id}`, user);
   return response.data;
 };
+
+export const signIn = async (credentials) => {
+  const response = await axios.post(`${USERS_API}/signin`, credentials);
+  return response.data;
+};
+
+export const signUp = async (credentials) => {
+  const response = await axios.post(`${USERS_API}/signup`, credentials);
+  return response.data;
+};
+
+export const account = async () => {
+  const response = await axios.post(`${USERS_API}/account`);
+  return response.data;
+};
+
+export const signOut = async () => {
+  const response = await axios.post(`${USERS_API}/signout`);
+  return response.data;
+};

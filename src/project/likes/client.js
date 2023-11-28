@@ -15,5 +15,11 @@ export const createUserLikesAlbum = (userId, albumId) => {
   );
   return response.data;
 };
-export const findAlbumsUserLikes = () => {};
-export const findUsersWhoLikeAlbum = () => {};
+export const findAlbumsUserLikes = (userId) => {
+  const response = request.get(`${LIKES_API}/users/${userId}/likes`);
+  return response.data;
+};
+export const findUsersWhoLikeAlbum = (albumId) => {
+  const response = request.get(`${LIKES_API}/albums/${albumId}/likes`);
+  return response.data;
+};

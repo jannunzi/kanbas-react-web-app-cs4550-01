@@ -20,7 +20,7 @@ function UserList() {
             className="list-group-item"
             to={`/project/users/${user._id}`}
           >
-            {user.username}
+            {user.username} {user.role}
           </Link>
         ))}
       </div>

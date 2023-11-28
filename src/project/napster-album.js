@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as client from "./napster-service";
+import * as likesClient from "./likes/client";
+import * as userService from "./users/client";
 import { useState } from "react";
 function AlbumDetails() {
   const [album, setAlbum] = useState(null);
   const [tracks, setTracks] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
   const { id } = useParams();
 
   const fetchAlbum = async (id) => {
@@ -17,15 +20,27 @@ function AlbumDetails() {
     setTracks(result.tracks);
   };
 
+  const like = async () => {
+    await likesClient.createUserLikesAlbum(currentUser._id, id);
+  };
+  const fetchCurrentUser = async () => {
+    const user = await userService.account();
+    setCurrentUser(user);
+  };
+
   useEffect(() => {
     fetchAlbum(id);
     fetchTracks(id);
+    fetchCurrentUser();
   }, [id]);
 
   return (
     <div>
       {album && (
         <>
+          <button onClick={like} className="btn btn-primary float-end">
+            Like
+          </button>
           <h1>{album.name}</h1>
           <img src={client.albumImageUrl(album)} />
           <p>Released: {album.released}</p>

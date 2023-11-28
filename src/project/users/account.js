@@ -1,14 +1,18 @@
 import * as client from "./client";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import * as followsClient from "../follows/client";
 
 function Account() {
   const [user, setUser] = useState(null);
+  const [following, setFollowing] = useState([]);
+
   const navigate = useNavigate();
   const fetchUser = async () => {
     try {
       const user = await client.account();
       setUser(user);
+      fetchFollowing(user._id);
     } catch (error) {
       navigate("/project/signin");
     }
@@ -20,6 +24,12 @@ function Account() {
   const updateUser = async () => {
     await client.updateUser(user._id, user);
   };
+
+  const fetchFollowing = async (userId) => {
+    const following = await followsClient.findUsersFollowedByUser(userId);
+    setFollowing(following);
+  };
+
   useState(() => {
     fetchUser();
   }, []);
@@ -56,6 +66,19 @@ function Account() {
           Users
         </Link>
       )}
+      <h2>Following</h2>
+      <div className="list-group">
+        {following.map((follows) => (
+          <Link
+            key={follows.followed._id}
+            className="list-group-item"
+            to={`/project/users/${follows.followed._id}`}
+          >
+            {follows.followed.firstName} {follows.followed.lastName} (@
+            {follows.followed.username})
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import * as client from "./client";
 import { Link } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// import { useNavigate } from "react-router-dom";
 function UserList() {
   const [users, setUsers] = useState([]);
+  // const navigate = useNavigate();
+  // const { currentUser } = useSelector((state) => state.usersReducer);
+  // if (!currentUser || currentUser.role !== "ADMIN") {
+  //   navigate("/project/signin");
+  // }
   const fetchUsers = async () => {
     const users = await client.findAllUsers();
     setUsers(users);

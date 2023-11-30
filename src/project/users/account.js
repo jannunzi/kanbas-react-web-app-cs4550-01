@@ -2,10 +2,13 @@ import * as client from "./client";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import * as followsClient from "../follows/client";
+import { setCurrentUser } from "./reducer";
+import { useDispatch } from "react-redux";
 
 function Account() {
   const [user, setUser] = useState(null);
   const [following, setFollowing] = useState([]);
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
   const fetchUser = async () => {
@@ -19,6 +22,7 @@ function Account() {
   };
   const signOut = async () => {
     await client.signOut();
+    dispatch(setCurrentUser(null));
     navigate("/project/signin");
   };
   const updateUser = async () => {

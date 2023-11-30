@@ -2,9 +2,11 @@ import * as client from "./client";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import * as followsClient from "../follows/client";
+import { useSelector } from "react-redux";
 function UserDetails() {
   const [user, setUser] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null); // [1
+  // const [currentUser, setCurrentUser] = useState(null); // [1
+  const { currentUser } = useSelector((state) => state.usersReducer); // [2
   const [followers, setFollowers] = useState([]);
   const [following, setFollowing] = useState([]);
   const { id } = useParams();
@@ -14,10 +16,10 @@ function UserDetails() {
     fetchFollowers(user._id);
     fetchFollowing(user._id);
   };
-  const fetchCurrentUser = async () => {
-    const user = await client.account();
-    setCurrentUser(user);
-  };
+  // const fetchCurrentUser = async () => {
+  //   const user = await client.account();
+  //   setCurrentUser(user);
+  // };
   const follow = async () => {
     await followsClient.createUserFollowsUser(currentUser._id, user._id);
   };
@@ -32,15 +34,29 @@ function UserDetails() {
     setFollowing(following);
   };
 
+  const alreadyFollowing = () => {
+    return followers.find(
+      (follows) => follows.follower._id === currentUser._id
+    );
+  };
+
   useEffect(() => {
     fetchUser();
-    fetchCurrentUser();
+    // fetchCurrentUser();
   }, [id]);
   return (
     <div className="container">
-      <button onClick={follow} className="btn btn-primary float-end">
-        Follow
-      </button>
+      {currentUser?._id !== id && (
+        <>
+          {alreadyFollowing() ? (
+            <button className="btn btn-danger float-end">Unfollow</button>
+          ) : (
+            <button onClick={follow} className="btn btn-primary float-end">
+              Follow
+            </button>
+          )}
+        </>
+      )}
       <h1>User Details</h1>
       {currentUser?.role === "ADMIN" && (
         <>

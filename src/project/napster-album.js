@@ -4,6 +4,7 @@ import * as client from "./napster-service";
 import * as likesClient from "./likes/client";
 import * as userService from "./users/client";
 import { useState } from "react";
+import ProtectedContent from "./users/protectedContent";
 function AlbumDetails() {
   const [album, setAlbum] = useState(null);
   const [tracks, setTracks] = useState([]);
@@ -38,9 +39,12 @@ function AlbumDetails() {
     <div>
       {album && (
         <>
-          <button onClick={like} className="btn btn-primary float-end">
-            Like
-          </button>
+          <ProtectedContent>
+            <button onClick={like} className="btn btn-primary float-end">
+              Like
+            </button>
+            <button className="btn btn-danger float-end">Unlike</button>
+          </ProtectedContent>
           <h1>{album.name}</h1>
           <img src={client.albumImageUrl(album)} />
           <p>Released: {album.released}</p>
